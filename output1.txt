@@ -1,1 +1,5 @@
-8
+Frequency of c is : 1
+Frequency of d is : 1
+Frequency of g is : 0
+Frequency of a is : 3
+Frequency of e is : 1

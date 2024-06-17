@@ -3,6 +3,7 @@
         "iostream": "cpp",
         "ostream": "cpp",
         "valarray": "cpp",
-        "chrono": "cpp"
+        "chrono": "cpp",
+        "ratio": "cpp"
     }
 }
