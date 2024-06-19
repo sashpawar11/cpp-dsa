@@ -1,2 +1,1 @@
-Element with higher frequency is 15 with frequency of 2
-Element with lowest frequency is 2 with frequency of 1
+9 13 24 46 54 
