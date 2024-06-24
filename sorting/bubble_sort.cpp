@@ -5,15 +5,18 @@ using namespace std;
 
 /*
 BUBBLE SORT
-
 Pushes max to the end using adjactent swap rounds
+
+TIME COMPLEXITY:
+WORST CASE & AVG CASE --> O (n^2)
+BEST CASE ---> Array already in sorted order -> O(n)
 */
 
 void bubble_sort(int arr[], int n){
 
     int idx_max;
 
-    for(int i = n-1; i >= 1; i--){
+    for(int i = n-1; i >= 0; i--){
 
         for(int j = 0; j<= i - 1; j++){
 
