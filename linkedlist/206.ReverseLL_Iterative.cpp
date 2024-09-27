@@ -13,6 +13,9 @@
 // Iterative Approach to reverse LL 
     // Using Two Pointers
 
+ //Time Complexity: O(N)
+ // Memory Complexity: O(1)
+ 
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
@@ -27,5 +30,7 @@ public:
             current = temp;
         }
         return prev;
+
+
     }
 };
