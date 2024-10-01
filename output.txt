@@ -1,0 +1,2 @@
+Current working dir: /home/sash/coding/cpp-dsa
+Text
