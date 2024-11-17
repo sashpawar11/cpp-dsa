@@ -1,52 +1,74 @@
-#import<bits/stdc++.h>
-using namespace std;
-
-
-// Optimized Solution using same LLs and Two-Pointers
-struct ListNode {
-      int val;
-      ListNode *next;
-      ListNode() : val(0), next(nullptr) {}
-      ListNode(int x) : val(x), next(nullptr) {}
-      ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
- 
-
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+        ListNode* dummyNode = new ListNode(-1);
+        ListNode* curr = dummyNode;
 
+        ListNode* t1 = list1;
+        ListNode* t2 = list2;
 
-        // Create Two pointers
-            ListNode* t1 = list1;
-            ListNode* t2 = list2;
+        while( t1 != NULL || t2 != NULL){
 
-        // Create DummyNode
-            ListNode* dummyNode = new ListNode(-1);
-            ListNode* temp = dummyNode;
+            int minimum = INT_MAX;
 
-            while(t1 != NULL || t2 != NULL){
+            if(t1){
+                if( (t1->val) < minimum){
+                    minimum = t1 -> val;
+                }
+            };
 
-                    if(t1->val < t2 ->val){
-                        temp -> next = t1;
-                        temp = t1;
-                        t1 = t1 -> next;
-                    }
-                    else{
+            if(t2){
+                if( (t2->val) < minimum){
+                    minimum = t2 -> val;
+                }
+            };
 
-                        temp -> next = t2;
-                        temp = t2;
-                        t2 = t2 -> next;
-                    }
-            }
-            if(t1 == NULL){
-                temp -> next = t2;
-            }
-            else{
-                temp -> next = t1;
-            }
+            if(t1){
+                if(minimum == (t1->val)){
+                        ListNode* newNode = new ListNode(t1 -> val);
+                        curr -> next = newNode;
+                        curr = newNode;
+                }
+                if(t2){
+                      ListNode* newNode = new ListNode(t2 -> val);
+                        curr -> next = newNode;
+                        curr = newNode;
+                }
+            };
+            else if(t2){
+                if(minimum == (t2->val)){
+                        ListNode* newNode = new ListNode(t2 -> val);
+                        curr -> next = newNode;
+                        curr = newNode;
+                }
+                if(t1){
+                      ListNode* newNode = new ListNode(t1 -> val);
+                        curr -> next = newNode;
+                        curr = newNode;
+                }
+            };
+
+            if(t2){
+                ListNode* newNode = new ListNode(t2 -> val);
+                curr -> next = newNode;
+                curr = newNode;
+            };
+
+            if(t1) t1 = t1 -> next;
+            if(t2) t2 = t2 -> next;
+        };
 
         return dummyNode -> next;
-        
+
     }
 };
