@@ -1,0 +1,20 @@
+
+Normal loopiong through vector: 
+1 2 3 4 4 5 6 8 
+Size of vector: 8
+1
+0
+
+Looping using Vector Iterator 
+1 2 3 4 4 5 6 8 
+Looping using auto Iterator 
+1 2 3 4 4 5 6 8 
+Looping using auto reverse iterator 
+8 6 5 4 4 3 2 1 
+Looping a duplicated copy of vector
+1 2 3 4 4 5 6 8 
+1 8
+5 6 8 
+5 6 5 6 8 
+Pair Class 
+2 8

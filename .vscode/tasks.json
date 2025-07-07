@@ -2,32 +2,33 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Compile and run",
+            "label": "Build Active C++ File",
             "type": "shell",
-            "command": "bash",
+            "command": "g++",
             "args": [
-                "-c",
-                "cp '${file}' '${workspaceFolder}/jspwTest.cpp' && g++ '${workspaceFolder}/jspwTest.cpp' -o '${workspaceFolder}/jspwTest' && '${workspaceFolder}/jspwTest' < '${workspaceFolder}/input.txt' > '${workspaceFolder}/output.txt' && rm '${workspaceFolder}/jspwTest'"
+                "-std=c++17",
+                "-Wall",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
             ],
-            "presentation": {
-                "reveal": "never"
-            },
             "group": "build",
-            "problemMatcher": {
-                "owner": "cpp",
-                "fileLocation": [
-                    "relative",
-                    "${workspaceFolder}"
-                ],
-                "pattern": {
-                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
-                    "file": 1,
-                    "line": 2,
-                    "column": 3,
-                    "severity": 4,
-                    "message": 5
-                }
-            }
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Run Active C++ with input.txt",
+            "type": "shell",
+            "command": "${fileDirname}/${fileBasenameNoExtension} < ${fileDirname}/input.txt > ${fileDirname}/output.txt",
+            "dependsOn": "Build Active C++ File",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
         }
     ]
-}
+  }
+  
