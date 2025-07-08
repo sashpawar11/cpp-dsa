@@ -332,5 +332,31 @@ int main()
         cout << (*i).first << "->" << (*i).second << ", ";
     }
 
+
+    //--------------------------------------------
+    /// FUNCTIONS AND ALGORITHMS
+
+
+    // Sort function()
+    cout << endl << endl << "Sort Function Map Class " << endl; 
+
+    // on arrays
+    int arr[5] = {1 ,6 ,52,24 ,2};
+    sort(arr , arr + 2);
+    for (int i =0; i<5; i++){
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+
+    // on vectors
+    vector<int> vec = {1 ,6 ,52,24 ,2};
+    sort(vec.begin() +  1, vec.begin() + 4);
+    for (auto itr: vec){
+        cout << itr << " ";
+    }
+
+
+
     return 0;
 }
