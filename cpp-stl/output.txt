@@ -18,3 +18,42 @@ Looping a duplicated copy of vector
 5 6 5 6 8 
 Pair Class 
 2 8
+
+List Class 
+9 16 1 
+Stack Class 
+3
+3 2 1 
+Queue Class 
+1 4
+Priority Queue Class 
+467 77 15 12 1 
+Min-heap priority queue
+1 12 15 77 467 
+
+Set Class 
+1 6 7 13 16 24 90 
+Find 13 in set - 13
+Find for 16 using count - 0
+
+16
+7
+1 6 7 16 24 90 
+1 90 
+
+MultiSet Class 
+1 1 6 6 
+
+Unordered Set Class 
+13 245 24 562 2 
+
+Map Class 
+1 : Saish, 2 : Pawar, 13 : Cool, 
+2->Pawar
+
+Unordered Map Class 
+13 : Cool, 2 : Pawar, 1 : Saish, 
+
+MultiMap Map Class 
+1 : Saish, 1 : Grok, 2 : Pawar, 2 : New, 2 : Test, 2 : et, 2 : q24, 2 : tuf, 
+2->Pawar, 2->New, 2->Test, 2->et, 2->q24, 2->tuf, 
