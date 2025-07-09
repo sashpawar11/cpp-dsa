@@ -13,6 +13,18 @@ List and Deque - use linked list behind the scenes
 
 */
 
+bool internalComparator(int e1,int e2){
+    if (e1 < e2) return false;
+    return true;
+};
+
+bool internalPairComparator(pair<int,int> el1, pair<int,int>el2){
+    if(el1.second > el2.second) return true;
+    if(el1.second < el2.second) return false;
+    if(el1.first < el2.first) return true;
+
+    return false;
+}
 int main()
 {
     
@@ -397,14 +409,53 @@ int main()
     }while (next_permutation(str.begin(),str.end()));
   
 
-    // max and min functions ( works on arr,string,vec)
-    // Prints all permutations
-    cout << endl << endl << "Max and Min Function " << endl; 
+    // max and min functions 
+    cout << endl << endl << "Max and Min Functions " << endl; 
 
-    do { 
-            cout << str << endl;
-    }while (next_permutation(str.begin(),str.end()));
-  
+    auto maxitr = *max_element(arr2,arr2+7);
+    auto minitr = *min_element(arr2,arr2+7);
+    cout << maxitr << endl;
+    cout << minitr << endl;
+
+
+    // Reverse  function 
+    cout << endl << endl << "Reverse function" << endl; 
+
+    reverse(arr2, arr2+7);
+    for(int i: arr2){
+        cout << i << " ";
+    }
+
+    // pow function
+
+    cout << endl << "Pow function" << endl;
+    cout << pow (2,6)<< endl;
+
+
+
+
+    // Comparator function
+    // when we do sort(), there is an internal comparator that compares each element with next element and sets a bool.
+    // If we want to override this logic( eg. reverse sort it), we can define our own intenral comparator and pass it to the sort function
+    cout << endl << endl << "Comparator function" << endl; 
+    int arr3[5] = {1 ,6 ,52,24 ,2};
+    sort(arr3 , arr3 + 5, internalComparator);
+    for (int i : arr3){
+        cout << i << " ";
+    }
+    cout  << endl; 
+    // Another example
+    pair<int,int> comparr[] = {{1,6}, {1,5} , {2,6},{2,9}, {3,9}};
+
+    // sort it according to second element 
+    // if two pairs have the same largest second element, get according to smaller of the first element in the pair
+    // {2,9},{3,9},{1,6},{2,6},{1,5}
+
+    sort(comparr,comparr + 5,internalPairComparator);
+    for(pair<int,int> i : comparr){
+        cout << "{"<< i.first << "," << i.second << "} ";
+    }
 
     return 0;
 }
+

@@ -81,3 +81,19 @@ bac
 bca
 cab
 cba
+
+
+Max and Min Functions 
+52
+1
+
+
+Reverse function
+52 52 2 24 52 6 1 
+Pow function
+64
+
+
+Comparator function
+52 24 6 2 1 
+{2,9} {3,9} {1,6} {2,6} {1,5} 
