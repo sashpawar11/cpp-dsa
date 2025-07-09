@@ -13,6 +13,15 @@ List and Deque - use linked list behind the scenes
 
 */
 
+
+// SPP STL Library
+/*
+Containers
+Algos
+Functions
+Iterators
+*/
+
 bool internalComparator(int e1,int e2){
     if (e1 < e2) return false;
     return true;
