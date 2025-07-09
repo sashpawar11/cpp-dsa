@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+#include <numeric>
 using namespace std;
 
 
@@ -338,7 +339,7 @@ int main()
 
 
     // Sort function()
-    cout << endl << endl << "Sort Function Map Class " << endl; 
+    cout << endl << endl << "Sort Function " << endl; 
 
     // on arrays
     int arr[5] = {1 ,6 ,52,24 ,2};
@@ -357,6 +358,53 @@ int main()
     }
 
 
+
+    // Accumulate function()
+    cout << endl << endl << "Accumulate Function " << endl; 
+
+    // on arrays
+    int arr2[7] = {1 ,6 ,52,24 ,2, 52, 52};
+    cout<< endl<< accumulate(arr2,arr2+5,0);
+    /// accumulate( pos1, pos2, initalsum)
+    cout << endl;
+
+
+    // Count
+    // useful for finding count of elemetns in an arr
+    cout << endl << endl << "Count Function " << endl; 
+    int numToFind = 52;
+    cout << count(arr2,arr2+7,numToFind) << endl;
+
+
+    // Find
+    // useful for finding position itr  of an element's first occurence
+    cout << endl << endl << "Find Function " << endl; 
+    auto it3 = find(arr,arr+7,90);
+    if(it3 == arr +7){
+        cout << "Element not found";
+    }
+    else {
+           cout << *it3<< endl;
+    }
+
+    // next_permutation function ( works on arr,string,vec)
+    // Prints all permutations
+    cout << endl << endl << "NextPermutation Function " << endl; 
+    string str = "abc";
+
+    do { 
+            cout << str << endl;
+    }while (next_permutation(str.begin(),str.end()));
+  
+
+    // max and min functions ( works on arr,string,vec)
+    // Prints all permutations
+    cout << endl << endl << "Max and Min Function " << endl; 
+
+    do { 
+            cout << str << endl;
+    }while (next_permutation(str.begin(),str.end()));
+  
 
     return 0;
 }

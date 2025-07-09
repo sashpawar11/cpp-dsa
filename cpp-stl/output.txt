@@ -58,6 +58,26 @@ MultiMap Map Class
 1 : Saish, 1 : Grok, 2 : Pawar, 2 : New, 2 : Test, 2 : et, 2 : q24, 2 : tuf, 
 2->Pawar, 2->New, 2->Test, 2->et, 2->q24, 2->tuf, 
 
-Sort Function Map Class 
+Sort Function 
 1 6 52 24 2 
 1 6 24 52 2 
+
+Accumulate Function 
+
+85
+
+
+Count Function 
+3
+
+
+Find Function 
+Element not found
+
+NextPermutation Function 
+abc
+acb
+bac
+bca
+cab
+cba
