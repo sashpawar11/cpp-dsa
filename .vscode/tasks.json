@@ -1,34 +1,37 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "Build Active C++ File",
-            "type": "shell",
-            "command": "g++",
-            "args": [
-                "-std=c++17",
-                "-Wall",
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
-            ],
-            "group": "build",
-            "problemMatcher": [
-                "$gcc"
-            ]
-        },
-        {
-            "label": "Run Active C++ with input.txt",
-            "type": "shell",
-            "command": "${fileDirname}/${fileBasenameNoExtension} < ${fileDirname}/input.txt > ${fileDirname}/output.txt",
-            "dependsOn": "Build Active C++ File",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": []
-        }
-    ]
-  }
-  
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Active C++ File",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-std=c++17",
+        "-Wall",
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "group": "build",
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "Create Input/Output Files",
+      "type": "shell",
+      "command": "touch ${fileDirname}/input.txt ${fileDirname}/output.txt",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Active C++ with input.txt",
+      "type": "shell",
+      "command": "${fileDirname}/${fileBasenameNoExtension} < ${fileDirname}/input.txt > ${fileDirname}/output.txt",
+      "dependsOn": ["Build Active C++ File", "Create Input/Output Files"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
