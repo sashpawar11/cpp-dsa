@@ -89,7 +89,8 @@
     "syncstream": "cpp",
     "thread": "cpp",
     "typeindex": "cpp",
-    "typeinfo": "cpp"
+    "typeinfo": "cpp",
+    "lcm,cpp": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled"
 }
