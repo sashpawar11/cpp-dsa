@@ -30,10 +30,7 @@ it can go only till 10^6
 
 int main()
 {
-#ifndef ONLINE_JUDGE
-        freopen("../input1.txt", "r", stdin);
-        freopen("../output1.txt", "w", stdout);
-#endif
+
     int n,x;
     cin >> n;
     int arr[n];
