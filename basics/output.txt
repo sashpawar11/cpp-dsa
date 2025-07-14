@@ -1,1 +1,1 @@
-Second Highest Occuring element is : 2
+Sum of highest and lowest freq : 3
