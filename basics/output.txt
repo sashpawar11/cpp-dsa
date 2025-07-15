@@ -1,0 +1,2 @@
+
+Longest common prefix is: pre
