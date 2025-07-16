@@ -3,28 +3,31 @@
 using namespace std;
 
 string longestCommonPrefix(vector<string>& str){
-    //your code goes here
+            //your code goes here
 
-    string longestprfix = "";
-    //First we sort the array/vec in lexical oder( lowest to highest)
-    
-    sort(str.begin(), str.end());
-    
-    
+            string longestprefix = "";
+            //First we sort the array/vec in lexical oder( lowest to highest)
+            
+            sort(str.begin(), str.end());
+            
+            string str1 = *str.begin(); // get first and last string in vector
+            string str2 = *(str.end() - 1);
 
-    string str1 = *str.begin(); // get first and last string in vector
-    string str2 = *(str.end() - 1);
+            int n = min(str1.length(), str2.length());
+            int prefixlength = 0;
+            for(int i = 0; i< n; i++){
 
-    int n = min(str1.length(), str2.length());
+                    if(str1[i] == str2[i]){
+                        prefixlength += 1;
+                    }
+                    else {
+                        break;
+                    }
+            }
 
-
-    for(int i = 1; i<= n-1; i++){
-        if(str1.substr(0,i+1) == str2.substr(0,i+1)){
-            longestprfix = str1.substr(0,i+1);
-        }
-    }
-    
-    return  longestprfix;
+            longestprefix = str1.substr(0, prefixlength);
+          
+            return  longestprefix;
 }
 
 
