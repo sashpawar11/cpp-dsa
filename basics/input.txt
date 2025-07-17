@@ -1,2 +1,1 @@
-anagram
-nagaram
+tea

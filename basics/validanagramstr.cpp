@@ -17,7 +17,7 @@ bool isAnagram(string s, string t) {
         // store frequencies of each char from s in a count arr
         // iterate through t and decrease the freq for occurences in count arr
         // iterate through final count arr, if all have values as 0 then it is an anagram
-	
+    
 }
 int main() {
     string s;
