@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// unotimized - time complexity ()
+// unotimized - time complexity (O(nlogn))
 bool isIsomorphic(string s, string t) {
         unordered_map <int,char> mpp;
         unordered_set<char> vals;
