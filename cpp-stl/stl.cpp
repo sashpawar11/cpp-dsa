@@ -300,7 +300,7 @@ int main()
     mymap.insert({1, "Saish"});
     mymap.insert({2, "Pawar"});
     mymap.insert({13, "Cool"});
-
+    mymap.
     for(auto i: mymap){
         cout << i.first << " : " << i.second << ", ";
     }

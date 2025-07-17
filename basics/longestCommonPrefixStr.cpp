@@ -24,7 +24,7 @@ string longestCommonPrefix(vector<string>& str){
                         break;
                     }
             }
-
+            
             longestprefix = str1.substr(0, prefixlength);
           
             return  longestprefix;
